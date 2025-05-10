@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>DANZZ JAVASCRIPT</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      background: linear-gradient(to bottom, #1b1b60, #000);
+      color: cyan;
+      overflow-x: hidden;
+    }
+
+    .container {
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 26px;
+      font-weight: bold;
+      text-shadow: 0 0 5px #0ff, 0 0 10px #0ff, 0 0 20px #0ff;
+      animation: glow 2s ease-in-out infinite alternate;
+    }
+
+    @keyframes glow {
+      from {
+        text-shadow: 0 0 5px #0ff, 0 0 10px #0ff, 0 0 20px #0ff;
+      }
+      to {
+        text-shadow: 0 0 10px #0ff, 0 0 20px #0ff, 0 0 30px #0ff;
+      }
+    }
+
+    .description {
+      display: inline-block;
+      background: #00d2ff;
+      color: black;
+      padding: 10px 20px;
+      border-radius: 10px;
+      margin: 10px 0;
+      font-weight: bold;
+      box-shadow: 0 0 5px cyan;
+    }
+
+    .search-box {
+      display: flex;
+      align-items: center;
+      background: black;
+      border: 2px solid cyan;
+      border-radius: 12px;
+      padding: 10px;
+      margin: 10px 0;
+    }
+
+    .search-box input {
+      background: black;
+      border: none;
+      color: cyan;
+      flex: 1;
+      font-size: 18px;
+      margin-left: 10px;
+      outline: none;
+    }
+
+    .buttons-scroll {
+      display: flex;
+      overflow-x: auto;
+      padding: 10px 0;
+      gap: 10px;
+    }
+
+    .buttons-scroll::-webkit-scrollbar {
+      display: none;
+    }
+
+    .tombol {
+      background: #1b1bff;
+      color: white;
+      padding: 10px 20px;
+      border: 2px solid #7a7aff;
+      border-radius: 12px;
+      font-size: 16px;
+      white-space: nowrap;
+      box-shadow: 0 0 5px blue;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .tombol:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 10px #7a7aff, 0 0 20px #7a7aff;
+    }
+
+    .get-input {
+      display: flex;
+      margin-top: 20px;
+      gap: 10px;
+    }
+
+    .get-input input {
+      flex: 1;
+      padding: 10px;
+      border-radius: 12px;
+      border: none;
+      font-size: 18px;
+    }
+
+    .get-button {
+      background: #3a4bff;
+      color: white;
+      padding: 10px 20px;
+      font-weight: bold;
+      border-radius: 10px;
+      border: none;
+      box-shadow: 0 0 5px #3a4bff;
+      transition: background 0.3s, box-shadow 0.3s;
+    }
+
+    .get-button:hover {
+      background: #5f6dff;
+      box-shadow: 0 0 10px #5f6dff;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>DANZZ JAVASCRIPT</h1>
+
+    <div class="description">description</div>
+
+    <div class="search-box">
+      <span style="font-size: 24px; color: white;">&#128269;</span>
+      <input type="text" placeholder="teks" />
+    </div>
+
+    <div class="buttons-scroll">
+      <div class="tombol">tombol</div>
+      <div class="tombol">tombol</div>
+      <div class="tombol">tombol</div>
+      <div class="tombol">tombol lagi</div>
+      <div class="tombol">lebih banyak tombol</div>
+    </div>
+
+    <div class="get-input">
+      <input type="text" placeholder="teks" />
+      <button class="get-button">get</button>
+    </div>
+  </div>
+</body>
+</html>
