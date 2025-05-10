@@ -5,12 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
   <title>DANZZ JAVASCRIPT</title>
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
-      font-family: sans-serif;
-      background: linear-gradient(to bottom, #1b1b60, #000);
+      padding: 0;
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(to bottom, #121272, #000);
       color: cyan;
-      overflow-x: hidden;
+      overflow-y: auto;
+      height: 100vh;
     }
 
     .container {
@@ -19,30 +25,36 @@
 
     h1 {
       text-align: center;
-      font-size: 26px;
+      font-size: 24px;
       font-weight: bold;
-      text-shadow: 0 0 5px #0ff, 0 0 10px #0ff, 0 0 20px #0ff;
-      animation: glow 2s ease-in-out infinite alternate;
+      margin-bottom: 20px;
+      color: #00f5ff;
+      text-shadow:
+        0 0 5px #00f5ff,
+        0 0 10px #00f5ff,
+        0 0 15px #00f5ff,
+        0 0 20px #0ff;
+      animation: glow 2s infinite alternate;
     }
 
     @keyframes glow {
       from {
-        text-shadow: 0 0 5px #0ff, 0 0 10px #0ff, 0 0 20px #0ff;
+        text-shadow: 0 0 5px #00f5ff, 0 0 10px #00f5ff, 0 0 15px #00f5ff;
       }
       to {
-        text-shadow: 0 0 10px #0ff, 0 0 20px #0ff, 0 0 30px #0ff;
+        text-shadow: 0 0 10px #00f5ff, 0 0 20px #00f5ff, 0 0 30px #0ff;
       }
     }
 
     .description {
       display: inline-block;
-      background: #00d2ff;
+      background: #00e4ff;
       color: black;
-      padding: 10px 20px;
-      border-radius: 10px;
-      margin: 10px 0;
+      padding: 10px 18px;
+      border-radius: 12px;
       font-weight: bold;
-      box-shadow: 0 0 5px cyan;
+      font-size: 16px;
+      box-shadow: 0 0 6px #0ff;
     }
 
     .search-box {
@@ -51,8 +63,8 @@
       background: black;
       border: 2px solid cyan;
       border-radius: 12px;
-      padding: 10px;
-      margin: 10px 0;
+      padding: 12px;
+      margin: 20px 0;
     }
 
     .search-box input {
@@ -68,8 +80,8 @@
     .buttons-scroll {
       display: flex;
       overflow-x: auto;
+      gap: 12px;
       padding: 10px 0;
-      gap: 10px;
     }
 
     .buttons-scroll::-webkit-scrollbar {
@@ -77,31 +89,31 @@
     }
 
     .tombol {
+      flex: 0 0 auto;
       background: #1b1bff;
       color: white;
-      padding: 10px 20px;
-      border: 2px solid #7a7aff;
-      border-radius: 12px;
-      font-size: 16px;
-      white-space: nowrap;
-      box-shadow: 0 0 5px blue;
-      transition: transform 0.3s, box-shadow 0.3s;
+      padding: 12px 20px;
+      border: 2px solid #6a6aff;
+      border-radius: 14px;
+      font-size: 17px;
+      box-shadow: 0 0 5px #5c5cff;
+      font-weight: bold;
+      transition: transform 0.2s;
     }
 
     .tombol:hover {
       transform: scale(1.05);
-      box-shadow: 0 0 10px #7a7aff, 0 0 20px #7a7aff;
     }
 
     .get-input {
       display: flex;
-      margin-top: 20px;
+      margin-top: 25px;
       gap: 10px;
     }
 
     .get-input input {
       flex: 1;
-      padding: 10px;
+      padding: 12px;
       border-radius: 12px;
       border: none;
       font-size: 18px;
@@ -110,17 +122,16 @@
     .get-button {
       background: #3a4bff;
       color: white;
-      padding: 10px 20px;
+      padding: 12px 20px;
       font-weight: bold;
-      border-radius: 10px;
+      border-radius: 12px;
       border: none;
-      box-shadow: 0 0 5px #3a4bff;
-      transition: background 0.3s, box-shadow 0.3s;
+      box-shadow: 0 0 6px #3a4bff;
+      transition: background 0.3s;
     }
 
     .get-button:hover {
-      background: #5f6dff;
-      box-shadow: 0 0 10px #5f6dff;
+      background: #5c6fff;
     }
   </style>
 </head>
@@ -139,8 +150,8 @@
       <div class="tombol">tombol</div>
       <div class="tombol">tombol</div>
       <div class="tombol">tombol</div>
-      <div class="tombol">tombol lagi</div>
-      <div class="tombol">lebih banyak tombol</div>
+      <div class="tombol">tombol kiri</div>
+      <div class="tombol">tombol extra</div>
     </div>
 
     <div class="get-input">
